@@ -1,5 +1,5 @@
 # ColorGame
-Assignment 2 -> Group Assignment
+Assignment 2 -> Group 6 Assignment
 MEMBERS:
 ************
 1. Aime Remy ISHIMWE......221004610
