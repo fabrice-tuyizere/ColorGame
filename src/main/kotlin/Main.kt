@@ -5,7 +5,7 @@ fun main() {
 
     // Step 1: First player randomly chooses four letters
     val secretCode = (1..4).map { colors.random() }
-println("secret code is : $secretCode")
+// println("secret code is : $secretCode")
     println("Computer it is your first player it has selected 4 colors randomly  in\t [${colors.joinToString()}] ")
 
     // Step 2: Second player makes guesses until correct
