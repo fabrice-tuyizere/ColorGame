@@ -5,7 +5,7 @@ fun main() {
 
     // Step 1: First player randomly chooses four letters
     val secretCode = (1..4).map { colors.random() }
-//println("secret code is : $secretCode")
+println("secret code is : $secretCode")
     println("Computer it is your first player it has selected 4 colors randomly  in\t [${colors.joinToString()}] ")
 
     // Step 2: Second player makes guesses until correct
@@ -55,11 +55,13 @@ fun provideFeedback(secretCode: List<Char>, guess: List<Char>): Pair<Int, Int>  
     val feedback = mutableListOf<Char>()
     var correctColor  = 0
     var correctPosition = 0
+    var listofcorrectcolor= mutableListOf<Char>()
     for (i in secretCode.indices) {
         if (guess[i] == secretCode[i]) {
             correctPosition++ // Correct color and position
         }
-        if (guess[i] in secretCode) {
+        else if (guess[i] in secretCode && guess[i] !in listofcorrectcolor) {
+          listofcorrectcolor.add(guess[i])
             correctColor++    // Correct color but wrong position
         }
     }
